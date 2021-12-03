@@ -16,7 +16,7 @@ public class ListaPersonas
         this.cant = 0;
     }
     
-    public boolean IngresarPersona(Persona p) 
+    public boolean ingresarPersona(Persona p) 
     {
         if(cant < max) 
         {
@@ -53,6 +53,31 @@ public class ListaPersonas
         }
     }
 
+    public boolean eliminarPersona (String rut)
+    {
+        int i;
+        for(i=0;i<cant;i++) 
+        {
+            if(lista[i].getRut().equals(rut)) 
+            {
+                break;
+            }
+        }
+        if ( i == cant) 
+        {
+            return false;
+        }
+        else 
+        {
+            for (int j = i; j< (cant -1); j++) 
+            {
+                lista[j] = lista[j+1];
+            }
+            cant --;
+            return true;
+        }
+    } 
+    
     public Persona[] getLista() {
         return lista;
     }

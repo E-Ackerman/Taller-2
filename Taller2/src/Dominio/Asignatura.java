@@ -7,8 +7,9 @@ public class Asignatura
     private int codigo;
     private String nombre;
     private int creditos;
-    private int nota;
+    private double nota;
     private String tipo;
+    private Paralelo paralelo;
 
     public Asignatura(int codigo, String nombre, int creditos, String tipo) {
         this.codigo = codigo;
@@ -41,11 +42,11 @@ public class Asignatura
         this.creditos = creditos;
     }
 
-    public int getNota() {
+    public double getNota() {
         return nota;
     }
 
-    public void setNota(int nota) {
+    public void setNota(double nota) {
         this.nota = nota;
     }
 
@@ -56,4 +57,13 @@ public class Asignatura
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+    public Paralelo getParalelo() {
+        return paralelo;
+    }
+
+    public void setParalelo(Paralelo paralelo) {
+        this.paralelo = paralelo;
+    }
+    
 }

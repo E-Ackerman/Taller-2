@@ -4,12 +4,13 @@ package Logica;
 
 public interface Sistema 
 {
-    public boolean ingresarEstudiante (String rut, String correo, int nivel, int contraseña);
-    public boolean ingresarAsignaturaObligatoria (String codigo, String nombre, int creditos, String tipo ,int nivel, int nota);
-    public boolean ingresarAsignaturaOpcional (String codigo, String nombre, int creditos, String tipo,int nota, int prerrequisito);
+    public boolean ingresarEstudiante (String rut, String correo, int nivel, String contraseña);
+    public boolean ingresarAsignaturaObligatoria (int codigo, String nombre, int creditos, String tipo ,int nivel);
+    public boolean ingresarAsignaturaOpcional (int codigo, String nombre, int creditos, String tipo, int prerrequisito);
     public boolean ingresarProfesor (String rut, String correo, String contraseña, int salario);
     public boolean ingresarParalelo (int numero);
-    public void asociarAsignaturaEstudiante (String rutEstudiante, int codigo, int nota);
+    public void asociarAsignaturaEstudianteCursada (String rutEstudiante, int codigo, double nota);
+    public void asociarAsignaturaEstudianteInscrita(String rutEstudiante, int codigo, int paralelo);
     public void asociarAsignaturasPrerrequisitos (int codigoAsignatura, int codigoPrerrequisito);
     public void asociarParalelo (int numero, int codigoAsignatura, String rutProfesor);
     public String obtenerEstudiantes();
@@ -23,7 +24,7 @@ public interface Sistema
     public String obtenerAlumnosParalelos (int numeroParalelo);
     public String obtenerAsignaturasProfesor (String rutProfesor);
     public String obtenerAlumnosAsignatura (String nombreAsignatura);
-    public void introducirNotaFinal (String rutAlumno, String nombreAsignatura, int nota);
+    public void introducirNotaFinal (String rutAlumno, String nombreAsignatura, double nota);
     public String obtenerEstudiantesEgresados ();
   
 }

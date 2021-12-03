@@ -15,7 +15,7 @@ public class ListaParalelos
         this.cant = 0;
     }
 
-    public boolean IngresarParalelo(Paralelo p) 
+    public boolean ingresarParalelo(Paralelo p) 
     {
         if(cant < max) 
         {

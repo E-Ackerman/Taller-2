@@ -1,10 +1,11 @@
 
 package Dominio;
-
+import Logica.*;
 
 public class Opcional extends Asignatura
 {
     private int prerrequisitos; // creditos de prerrequisito
+    
     public Opcional(int codigo, String nombre, int creditos, String tipo, int prerrequisitos) {
         super(codigo, nombre, creditos, tipo);
         this.prerrequisitos = prerrequisitos;
@@ -17,6 +18,4 @@ public class Opcional extends Asignatura
     public void setPrerrequisitos(int prerrequisitos) {
         this.prerrequisitos = prerrequisitos;
     }
-    
-    
 }

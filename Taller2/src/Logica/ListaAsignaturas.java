@@ -15,7 +15,7 @@ public class ListaAsignaturas
         this.cant = 0;
     }
 
-    public boolean IngresarAsignatura (Asignatura a) 
+    public boolean ingresarAsignatura (Asignatura a) 
     {
         if(cant < max) 
         {

@@ -52,6 +52,27 @@ public class ListaPersonas
             return lista[i];
         }
     }
+    
+    public Persona buscarCorreo (String correo) 
+    {
+        int i;
+        for(i=0;i<cant;i++) 
+        {
+            if(lista[i].getCorreo().equals(correo)) 
+            {
+                break;
+            }
+        }
+        
+        if(i == cant) 
+        {
+            return null;
+        }
+        else 
+        {
+            return lista[i];
+        }        
+    }
 
     public boolean eliminarPersona (String rut)
     {
